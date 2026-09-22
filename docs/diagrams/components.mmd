@@ -1,0 +1,23 @@
+graph TB
+    subgraph pg["PerimeterGuard"]
+        ingest["Сервіс прийому відео<br/>(RTSP Ingest)"]
+        edge["Модуль периферійної аналітики<br/>(Edge Inference)"]
+        rules["Механізм правил подій<br/>(Event / Rule Engine)"]
+        alert["Сервіс сповіщень<br/>(Alert Service)"]
+        archive["Сервіс архівації відео<br/>(Video Archive)"]
+        api["API Gateway / Backend"]
+        db["База метаданих подій"]
+        auth["Сервіс автентифікації"]
+        ui["Веб-консоль оператора"]
+    end
+
+    ingest -->|"кадри"| edge
+    ingest -->|"відеопотік"| archive
+    edge -->|"метадані детекції"| rules
+    rules -->|"подія тривоги"| alert
+    rules -->|"запис події"| db
+    alert -->|"push / webhook"| ui
+    ui -->|"запити"| api
+    api --> db
+    api --> archive
+    api --> auth

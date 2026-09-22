@@ -1,0 +1,11 @@
+graph TB
+    operator["Оператор охорони"]
+    admin["Адміністратор системи"]
+    cameras["IP-камери периметра<br/>(зовнішнє обладнання, ONVIF)"]
+    responder["Служба реагування<br/>(охорона / поліція)"]
+    system["PerimeterGuard<br/>відеоспостереження і аналітика подій"]
+
+    cameras -->|"відеопотік RTSP + телеметрія"| system
+    operator -->|"переглядає тривоги й архів"| system
+    admin -->|"налаштовує камери, зони, користувачів"| system
+    system -->|"сповіщення про тривогу (SMS/Telegram/email)"| responder

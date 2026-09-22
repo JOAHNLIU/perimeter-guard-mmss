@@ -1,0 +1,13 @@
+graph TB
+    subgraph edgeNode["Периферійний вузол (біля камери)"]
+        cam["IP-камера + Edge NPU<br/>(легка детекція руху)"]
+    end
+    subgraph serverNode["Серверний вузол (on-prem / VPS)"]
+        srv["Docker host:<br/>Ingest, Edge-верифікація,<br/>Rule Engine, Alert, API, DB, Archive"]
+    end
+    subgraph clientNode["Клієнтський вузол"]
+        client["Робоча станція оператора<br/>(браузер, веб-консоль)"]
+    end
+
+    cam -->|"RTSP/RTP відео +<br/>MQTT метадані детекції"| srv
+    srv -->|"HTTPS / WebSocket"| client
