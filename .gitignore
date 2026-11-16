@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+.venv/
+data/
+stream/hls/**/*.ts
+stream/dash/*.m4s
+__pycache__/
+ПІДГОТОВКА_ДО_ЗАХИСТУ.md

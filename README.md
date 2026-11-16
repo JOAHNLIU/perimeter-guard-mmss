@@ -47,3 +47,27 @@ npx -y @mermaid-js/mermaid-cli -i deployment.mmd -o deployment.svg
 альтернатива без встановлення — відкрити вміст `.mmd` на
 [mermaid.live](https://mermaid.live) і зберегти результат через
 `Actions → SVG`, зберігши ту саму назву файлу.
+
+## Лабораторна робота 2: конвеєр і адаптивне потокове передавання
+
+Репозиторій доповнено конвеєром оброблення медіаданих і адаптивним потоком HLS:
+
+- [`pipeline/pipeline.py`](pipeline/pipeline.py) — конвеєр «декодування — перетворення — кодування» і вимірювання PSNR та SSIM;
+- [`results/encoding.csv`](results/encoding.csv), [`docs/pipeline.md`](docs/pipeline.md) — вимірювання чотирьох варіантів кодування й звіт заняття 1;
+- [`stream/package.sh`](stream/package.sh), [`stream/player.html`](stream/player.html), `stream/hls/` — драбина з трьох рівнів, сегменти й плеєр з вимірюванням QoE;
+- [`results/qoe.csv`](results/qoe.csv), [`docs/qoe.md`](docs/qoe.md) — показники QoE для трьох профілів мережі та звіт заняття 2;
+- [`docs/adr/0004-parametry-konveiera-i-dostavlyannya.md`](docs/adr/0004-parametry-konveiera-i-dostavlyannya.md) — рішення щодо параметрів.
+
+Відтворення з кореня репозиторію (Git Bash у Windows):
+
+```
+python -m venv .venv && source .venv/Scripts/activate   # macOS/Linux: source .venv/bin/activate
+pip install -r pipeline/requirements.txt
+python tools/make_source.py          # data/source.mp4 (власне згенероване відео)
+python pipeline/pipeline.py          # results/encoding.csv
+bash stream/get_vendor.sh            # hls.js і dash.js у stream/vendor
+bash stream/package.sh hls           # сегменти й master.m3u8
+cd stream && python -m http.server 8000   # потім http://localhost:8000/player.html
+```
+
+Медіафайли (`data/`) і сегменти `.ts` у репозиторій не додаються.
