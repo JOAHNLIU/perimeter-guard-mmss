@@ -1,0 +1,5 @@
+cloud-broker: Up 29 seconds
+collector: Up 29 seconds
+edge-broker: Up 30 seconds
+gateway: Up 29 seconds
+sensors: Up 30 seconds

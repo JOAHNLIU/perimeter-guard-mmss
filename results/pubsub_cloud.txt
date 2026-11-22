@@ -1,0 +1,3 @@
+p1/north/motion-1/tele {"dev":"north-motion-1","boot":1,"seq":38,"ts":"2026-11-22T18:58:09.653Z","qty":"motion","val":0,"unit":"bool"}
+p1/north/light-1/tele {"dev":"north-light-1","boot":1,"seq":38,"ts":"2026-11-22T18:58:09.987Z","qty":"light","val":255.5,"unit":"lx"}
+p1/north/gate-1/tele {"dev":"north-gate-1","boot":1,"seq":38,"ts":"2026-11-22T18:58:10.320Z","qty":"gate","val":0,"unit":"bool"}

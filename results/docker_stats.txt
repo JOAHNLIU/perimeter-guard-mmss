@@ -1,0 +1,54 @@
+## HZ=10
+mmss-sensors-1 1.54% 16.46MiB / 7.716GiB
+mmss-gateway-1 3.39% 15.93MiB / 128MiB
+mmss-collector-1 1.04% 17.43MiB / 7.716GiB
+mmss-edge-broker-1 0.44% 3.633MiB / 128MiB
+mmss-cloud-broker-1 0.58% 2.891MiB / 7.716GiB
+## HZ=100
+mmss-sensors-1 12.03% 16.39MiB / 7.716GiB
+mmss-gateway-1 24.06% 16.37MiB / 128MiB
+mmss-collector-1 9.33% 18.2MiB / 7.716GiB
+mmss-edge-broker-1 3.74% 4.07MiB / 128MiB
+mmss-cloud-broker-1 4.18% 3.223MiB / 7.716GiB
+## HZ=200
+mmss-sensors-1 21.59% 16.45MiB / 7.716GiB
+mmss-gateway-1 24.59% 16.68MiB / 128MiB
+mmss-collector-1 10.66% 19.26MiB / 7.716GiB
+mmss-edge-broker-1 5.66% 3.504MiB / 128MiB
+mmss-cloud-broker-1 2.89% 3.484MiB / 7.716GiB
+## HZ=250
+mmss-sensors-1 22.49% 16.1MiB / 7.716GiB
+mmss-gateway-1 26.21% 18.01MiB / 128MiB
+mmss-collector-1 8.09% 20.54MiB / 7.716GiB
+mmss-edge-broker-1 5.95% 3.73MiB / 128MiB
+mmss-cloud-broker-1 2.23% 3.516MiB / 7.716GiB
+## HZ=300
+mmss-sensors-1 25.75% 15.66MiB / 7.716GiB
+mmss-gateway-1 25.21% 20.18MiB / 128MiB
+mmss-collector-1 8.67% 21.57MiB / 7.716GiB
+mmss-edge-broker-1 2.35% 3.496MiB / 128MiB
+mmss-cloud-broker-1 2.76% 3.543MiB / 7.716GiB
+## HZ=350
+mmss-sensors-1 23.47% 16.02MiB / 7.716GiB
+mmss-gateway-1 24.58% 21.93MiB / 128MiB
+mmss-collector-1 7.58% 21.72MiB / 7.716GiB
+mmss-edge-broker-1 2.41% 3.258MiB / 128MiB
+mmss-cloud-broker-1 2.10% 3.516MiB / 7.716GiB
+## HZ=400
+mmss-sensors-1 35.55% 16.04MiB / 7.716GiB
+mmss-gateway-1 24.86% 22.22MiB / 128MiB
+mmss-collector-1 7.14% 22.54MiB / 7.716GiB
+mmss-edge-broker-1 2.92% 3.516MiB / 128MiB
+mmss-cloud-broker-1 1.89% 3.418MiB / 7.716GiB
+## HZ=450
+mmss-sensors-1 39.17% 16.11MiB / 7.716GiB
+mmss-gateway-1 24.44% 25.03MiB / 128MiB
+mmss-collector-1 3.98% 22.61MiB / 7.716GiB
+mmss-edge-broker-1 10.46% 3.398MiB / 128MiB
+mmss-cloud-broker-1 1.48% 3.676MiB / 7.716GiB
+## HZ=500
+mmss-sensors-1 34.95% 15.78MiB / 7.716GiB
+mmss-gateway-1 23.93% 24.96MiB / 128MiB
+mmss-collector-1 4.73% 22.72MiB / 7.716GiB
+mmss-edge-broker-1 3.39% 3.488MiB / 128MiB
+mmss-cloud-broker-1 1.67% 3.211MiB / 7.716GiB

@@ -71,3 +71,23 @@ cd stream && python -m http.server 8000   # потім http://localhost:8000/pla
 ```
 
 Медіафайли (`data/`) і сегменти `.ts` у репозиторій не додаються.
+
+## Лабораторна робота 3: сенсорні дані та розгортання edge–cloud
+
+Репозиторій доповнено каналом телеметрії сенсорів периметра (рух, освітленість, стан воріт) і розподіленим розгортанням:
+
+- [`smart/`](smart/) — емулятор сенсорів `sensors.py`, підписник `collector.py`, підсумок `stats.py`, периферійний шлюз `gateway.py`, `docker-compose.yml`, `Dockerfile`, `broker/mosquitto.conf`, навантажувальне випробування `loadtest.sh` і `plot.py`;
+- [`docs/telemetry.md`](docs/telemetry.md) — теми, схема повідомлення, політика помилок, перевірка каналу;
+- [`docs/deployment.md`](docs/deployment.md) — складники, шаблони, розрив зв’язку, навантаження, масштабованість, мова і стек;
+- [`docs/adr/0005-*.md`](docs/adr/) і [`docs/adr/0006-*.md`](docs/adr/) — рішення щодо шаблонів і щодо мови та стека;
+- [`results/load.csv`](results/load.csv), [`results/latency.png`](results/latency.png) — результати навантажувального випробування.
+
+Відтворення з кореня репозиторію (Git Bash, запущений Docker Desktop, активне `.venv` з `paho-mqtt` і `matplotlib`):
+
+```
+bash smart/check_channel.sh      # заняття 1: канал, внесені збої
+bash smart/check_outage.sh       # заняття 2: розгортання, публікація — підписка, розрив зв'язку
+bash smart/loadtest.sh           # навантажувальне випробування
+python smart/plot.py             # results/latency.png
+python tools/make_lab3_docs.py   # формує docs/telemetry.md, docs/deployment.md, ADR-0005, ADR-0006
+```

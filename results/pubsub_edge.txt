@@ -1,0 +1,4 @@
+p1/north/motion-1/state online
+p1/north/light-1/state online
+p1/north/gate-1/state online
+Timed out
