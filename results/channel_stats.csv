@@ -1,0 +1,2 @@
+boot,rate,sent,received,loss,late,dup,lat_mean_ms,lat_p95_ms,lat_max_ms
+1,60.0,1800,1747,0.0294,51,26,2.9,2,93
